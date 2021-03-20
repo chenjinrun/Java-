@@ -1,0 +1,228 @@
+package score;
+
+import java.util.Scanner;
+
+public class task2 {
+	
+	public static int fnum,snum;
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+			int choose=menu();
+			while(choose!=6){
+				switch(choose){
+				case 1:input();break;
+				case 2:jishu();break;
+				case 3:oushuhe();break;
+				case 4:pfhe();break;
+				case 5:jishupfhe();break;
+				default:System.out.println("not choose or choose error,please choose again");break;
+				}
+				choose=menu();
+			}
+			System.out.println("exit,welcome use me again");
+	}
+	public static int menu(){
+		int choice=0;
+		System.out.println("=======bank mune=======");
+		System.out.println("1:input");
+		System.out.println("2:jishu   3:oushuhe");
+		System.out.println("4:pfhe   5:jishupfhe");
+		System.out.print("please choose(1-5):");
+		Scanner scan=new Scanner(System.in);
+		choice=scan.nextInt();
+		return choice;
+	}
+	
+	public static void input(){
+		System.out.println("please put in two number(firstnum and secondnum):");
+		Scanner scan=new Scanner(System.in);
+		fnum=scan.nextInt();
+		snum=scan.nextInt();
+		System.out.println("have been done!");
+	}
+	
+	public static void jishu(){
+		for(int i=fnum+1;i<snum;i++){
+			if(i%2==1){
+				System.out.print(i+" ");
+			}
+		}
+		System.out.println();
+	}
+	
+	public static void oushuhe(){
+		int he=0;
+		for(int i=fnum+1;i<snum;i++){
+			if(i%2==0){
+				he+=i;
+			}
+		}
+		System.out.println(he);
+	}
+	
+	public static void pfhe(){
+		int he=0;
+		for(int i=1;i<10;i++){
+			
+				he+=i*i*i;
+			
+		}
+		System.out.println(he);
+	}
+	public static void jishupfhe(){
+		int he=0;
+		for(int i=fnum+1;i<snum;i++){
+			if(i%2==1){
+				he+=i*i*i;
+			}
+		}
+		System.out.println(he);
+	}
+}
+
+
+package score;
+
+import java.util.Scanner;
+
+public class score {
+
+	public static double score[];
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+			int choose=menu();
+			while(choose!=5){
+				switch(choose){
+				case 1:input();break;
+				case 2:average();break;
+				case 3:highest();break;
+				case 4:lowest();break;
+				default:System.out.println("not choose or choose error,please choose again");break;
+				}
+				choose=menu();
+			}
+			System.out.println("exit,welcome use me again");
+	}
+	public static int menu(){
+		int choice=0;
+		System.out.println("=======bank mune=======");
+		System.out.println("1:input");
+		System.out.println("2:average   3:highest");
+		System.out.println("4:lowest   5:exit");
+		System.out.print("please choose(1-5):");
+		Scanner scan=new Scanner(System.in);
+		choice=scan.nextInt();
+		return choice;
+	}
+	
+	public static void input(){
+		score=new double[5];
+		Scanner scan=new Scanner(System.in);
+		for(int i=0;i<score.length;i++){
+			score[i]=scan.nextDouble();
+		}
+	}
+	
+	public static void average(){
+		double average=0;
+		for(int i=0;i<score.length;i++){
+			average+=score[i];
+		}
+		System.out.println("average="+(average/score.length));
+	}
+	
+	public static void highest(){
+		double max=score[0];
+		for(int i=1;i<score.length;i++){
+			if(score[i]>max){
+				max=score[i];
+			}
+		}
+		System.out.println("highest score is:"+max);
+	}
+	
+	public static void lowest(){
+		double min=score[0];
+		for(int i=1;i<score.length;i++){
+			if(score[i]<min){
+				min=score[i];
+			}
+		}
+		System.out.println("lowest score is:"+min);
+	}
+}
+
+
+
+package score;
+
+import java.util.Scanner;
+
+public class score {
+
+	public static double score[];
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+			int choose=menu();
+			while(choose!=5){
+				switch(choose){
+				case 1:input();break;
+				case 2:average();break;
+				case 3:highest();break;
+				case 4:lowest();break;
+				default:System.out.println("not choose or choose error,please choose again");break;
+				}
+				choose=menu();
+			}
+			System.out.println("exit,welcome use me again");
+	}
+	public static int menu(){
+		int choice=0;
+		System.out.println("=======bank mune=======");
+		System.out.println("1:input");
+		System.out.println("2:average   3:highest");
+		System.out.println("4:lowest   5:exit");
+		System.out.print("please choose(1-5):");
+		Scanner scan=new Scanner(System.in);
+		choice=scan.nextInt();
+		return choice;
+	}
+	
+	public static void input(){
+		score=new double[5];
+		Scanner scan=new Scanner(System.in);
+		for(int i=0;i<score.length;i++){
+			score[i]=scan.nextDouble();
+		}
+	}
+	
+	public static void average(){
+		double average=0;
+		for(int i=0;i<score.length;i++){
+			average+=score[i];
+		}
+		System.out.println("average="+(average/score.length));
+	}
+	
+	public static void highest(){
+		double max=score[0];
+		for(int i=1;i<score.length;i++){
+			if(score[i]>max){
+				max=score[i];
+			}
+		}
+		System.out.println("highest score is:"+max);
+	}
+	
+	public static void lowest(){
+		double min=score[0];
+		for(int i=1;i<score.length;i++){
+			if(score[i]<min){
+				min=score[i];
+			}
+		}
+		System.out.println("lowest score is:"+min);
+	}
+}
